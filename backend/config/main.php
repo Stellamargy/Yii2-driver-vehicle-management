@@ -18,7 +18,7 @@ return [
         ],
         'user' => [
 
-            // changed the user component to use a class in webvimark user management module package.
+            
             'class' => 'webvimark\modules\UserManagement\components\UserConfig',
     
             
