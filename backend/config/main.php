@@ -39,20 +39,26 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 
     'modules'=>[
 	'user-management' => [
 		'class' => 'webvimark\modules\UserManagement\UserManagementModule',
+        'controllerMap' => [
+            'auth' => [
+                'class' => 'webvimark\modules\UserManagement\controllers\AuthController',
+                'viewPath' => '@backend/views/auth'
+            ]
+            ],
 
 		// 'enableRegistration' => true,
 
